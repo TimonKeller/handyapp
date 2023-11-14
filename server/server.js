@@ -18,8 +18,23 @@ app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
 
-const registerRoute = require("./routes/register"); // adjust path accordingly
+const registerRoute = require("./routes/register");
+const loginRoute = require("./routes/login");
+const userInfoRoute = require("./routes/userInfo");
+const findFriendRoute = require("./routes/findFriend");
+const friendsRequestsRoute = require("./routes/friendsRequests");
+const sendInviteRoute = require("./routes/sendInvite");
+const acceptInviteRoute = require("./routes/acceptInvite");
+const friendsRoute = require("./routes/friends");
+
 app.use("/api", registerRoute);
+app.use("/api", loginRoute);
+app.use("/api", userInfoRoute);
+app.use("/api", findFriendRoute);
+app.use("/api", friendsRequestsRoute);
+app.use("/api", sendInviteRoute);
+app.use("/api", acceptInviteRoute);
+app.use("/api", friendsRoute);
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
