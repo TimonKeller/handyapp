@@ -13,6 +13,9 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "This app uses the photo library to select images."
+      },
       "supportsTablet": true
     },
     "android": {
